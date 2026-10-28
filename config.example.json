@@ -1,0 +1,182 @@
+{
+  "iterations": 10000,
+  "interval_ms": 100,
+  "rs485": {
+    "enabled": true,
+    "iterations": 10000,
+    "baudrate": 115200,
+    "frame_size": 260,
+    "interval_ms": 100,
+    "rx_timeout_ms": 600,
+    "pairs": [
+      {
+        "name": "485_1_2",
+        "a_dev": "/dev/ttySTM2",
+        "b_dev": "/dev/ttySTM3"
+      },
+      {
+        "name": "485_3_4",
+        "a_dev": "/dev/ttySTM4",
+        "b_dev": "/dev/ttySTM5"
+      },
+      {
+        "name": "485_5_6",
+        "a_dev": "/dev/ttySTM7",
+        "b_dev": "/dev/ttyCH9344USB4"
+      },
+      {
+        "name": "485_7_8",
+        "a_dev": "/dev/ttyCH9344USB0",
+        "b_dev": "/dev/ttyCH9344USB1"
+      },
+      {
+        "name": "485_9_10",
+        "a_dev": "/dev/ttyCH9344USB2",
+        "b_dev": "/dev/ttyCH9344USB3"
+      }
+    ]
+  },
+  "ethernet": {
+    "enabled": true,
+    "iterations": 10000,
+    "frame_size": 1400,
+    "interval_ms": 100,
+    "rx_timeout_ms": 600,
+    "pairs": [
+      {
+        "name": "e1_e2",
+        "a_ip": "eth0",
+        "a_port": 25001,
+        "b_ip": "lan2",
+        "b_port": 25002
+      },
+      {
+        "name": "e3_e4",
+        "a_ip": "lan3",
+        "a_port": 25003,
+        "b_ip": "lan4",
+        "b_port": 25004
+      }
+    ]
+  },
+  "dio": {
+    "enabled": true,
+    "iterations": 10000,
+    "toggle_interval_ms": 100,
+    "sample_delay_ms": 50,
+    "strict_no_check": false,
+    "do_map": [
+      {
+        "name": "DO1",
+        "chip": "gpiochip2",
+        "line": 0
+      },
+      {
+        "name": "DO2",
+        "chip": "gpiochip2",
+        "line": 3
+      },
+      {
+        "name": "DO3",
+        "chip": "gpiochip1",
+        "line": 10
+      },
+      {
+        "name": "DO4",
+        "chip": "gpiochip3",
+        "line": 14
+      },
+      {
+        "name": "DO5",
+        "chip": "gpiochip3",
+        "line": 15
+      },
+      {
+        "name": "DO6",
+        "chip": "gpiochip3",
+        "line": 11
+      },
+      {
+        "name": "DO7",
+        "chip": "gpiochip4",
+        "line": 7
+      },
+      {
+        "name": "DO8",
+        "chip": "gpiochip4",
+        "line": 8
+      }
+    ],
+    "di_map": [
+      {
+        "name": "DI1",
+        "chip": "gpiochip4",
+        "line": 9
+      },
+      {
+        "name": "DI2",
+        "chip": "gpiochip3",
+        "line": 12
+      },
+      {
+        "name": "DI3",
+        "chip": "gpiochip4",
+        "line": 10
+      },
+      {
+        "name": "DI4",
+        "chip": "gpiochip6",
+        "line": 9
+      },
+      {
+        "name": "DI5",
+        "chip": "gpiochip3",
+        "line": 4
+      },
+      {
+        "name": "DI6",
+        "chip": "gpiochip1",
+        "line": 7
+      },
+      {
+        "name": "DI7",
+        "chip": "gpiochip4",
+        "line": 6
+      },
+      {
+        "name": "DI8",
+        "chip": "gpiochip7",
+        "line": 9
+      }
+    ],
+    "no_map": [],
+    "dido_enabled": true,
+    "relay_enabled": false,
+    "relay_iterations": 100,
+    "relay_on_time_ms": 500,
+    "relay_interval_ms": 1000,
+    "relay_map": [
+      {
+        "name": "RELAY1",
+        "chip": "gpiochip2",
+        "line": 13
+      },
+      {
+        "name": "RELAY2",
+        "chip": "gpiochip5",
+        "line": 11
+      },
+      {
+        "name": "RELAY3",
+        "chip": "gpiochip8",
+        "line": 8
+      },
+      {
+        "name": "RELAY4",
+        "chip": "gpiochip7",
+        "line": 7
+      }
+    ]
+  },
+  "minimum_uptime_seconds": 80
+}
